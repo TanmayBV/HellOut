@@ -8,7 +8,6 @@ public class score : MonoBehaviour
     public Text scoretext;
     public float scorecount;
     public float pointpersecond;
-    public bool scoreincreasing;
   
     void Start() 
     {
@@ -19,6 +18,6 @@ public class score : MonoBehaviour
     void Update()
     {
         scorecount += pointpersecond * Time.deltaTime;
-        scoretext.text = "score: " + Mathf.Round(scorecount);
+        scoretext.text = "Score: " + Mathf.Round(scorecount);
     }
 }
