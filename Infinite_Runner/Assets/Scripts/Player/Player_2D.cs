@@ -10,11 +10,13 @@ public class Player_2D : MonoBehaviour
 
     [SerializeField] Rigidbody2D rb;
     [SerializeField] SpriteRenderer sr;
+    
     void Start()
     {
         clicked = true;
         rb = GetComponent<Rigidbody2D>();
         sr = GetComponent<SpriteRenderer>();
+       
     }
 
     // Update is called once per frame
