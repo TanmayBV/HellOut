@@ -6,15 +6,25 @@ public class Platform_ : MonoBehaviour
 {
 	private const float PLAYER_DISTANCE_SPAWN_LEVEL_PART = 200f;
 
+	[SerializeField] private GameObject Container;
 	[SerializeField] private Transform levelPart_Start;
+
 	[SerializeField] private List<Transform> levelPartlist;
+	[SerializeField] private List<Transform> Destoyer;
+
 	[SerializeField] private Transform player;
 	[SerializeField] private float Offset = 10f;
+	[SerializeField] private float DestroyOffset = 2f, Distance = 22.89f, CurrentDistance;
+
+	private int IndexDestroyer = 0;
 
 	private Vector3 lastEndPosition;
 
 	private void Awake()
 	{
+		CurrentDistance = Distance + DestroyOffset;
+		CurrentDistance *= 2;
+		Destoyer = new List<Transform>();
 		lastEndPosition = levelPart_Start.Find("EndPosition").position;
 		int startingSpawnLevelParts = 5;
 		for (int i = 0; i < startingSpawnLevelParts; i++)
@@ -29,6 +39,9 @@ public class Platform_ : MonoBehaviour
 		{
 			SpawnLevelPart();
 		}
+
+		Abc();
+
 	}
 
 	private void SpawnLevelPart()
@@ -41,6 +54,21 @@ public class Platform_ : MonoBehaviour
 	private Transform SpawnLevelPart(Transform levelPart,Vector3 spawnPosition)
 	{
 		Transform levelPartTransform = Instantiate(levelPart, new Vector3(spawnPosition.x + Offset,0,0), Quaternion.identity);
+		levelPartTransform.parent = Container.transform;
+		Destoyer.Add(levelPartTransform);
+		//Destroy(levelPartTransform.gameObject, Time); 22.89
 		return levelPartTransform;
 	}
+
+	private void Abc()
+	{
+		if (player.position.x > CurrentDistance)
+		{
+			Destroy(Destoyer[IndexDestroyer].gameObject);
+			IndexDestroyer++;
+			CurrentDistance += DestroyOffset + Distance;
+		}
+	
+	}
+
 }
