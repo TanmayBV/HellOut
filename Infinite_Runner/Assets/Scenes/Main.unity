@@ -217,7 +217,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &324201548
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3849,6 +3849,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5091509534953226314, guid: 2f194b0c65c96cc429a449c281aeb1db,
         type: 3}
+      propertyPath: m_Tiles.Array.data[229].second.m_AllTileFlags
+      value: 1073741825
+      objectReference: {fileID: 0}
+    - target: {fileID: 5091509534953226314, guid: 2f194b0c65c96cc429a449c281aeb1db,
+        type: 3}
       propertyPath: m_Tiles.Array.data[230].second.m_AllTileFlags
       value: 1073741825
       objectReference: {fileID: 0}
@@ -4210,6 +4215,11 @@ PrefabInstance:
     - target: {fileID: 5091509534953226314, guid: 2f194b0c65c96cc429a449c281aeb1db,
         type: 3}
       propertyPath: m_Tiles.Array.data[189].second.m_TileObjectToInstantiateIndex
+      value: 65535
+      objectReference: {fileID: 0}
+    - target: {fileID: 5091509534953226314, guid: 2f194b0c65c96cc429a449c281aeb1db,
+        type: 3}
+      propertyPath: m_Tiles.Array.data[229].second.m_TileObjectToInstantiateIndex
       value: 65535
       objectReference: {fileID: 0}
     - target: {fileID: 5091509534953226314, guid: 2f194b0c65c96cc429a449c281aeb1db,
