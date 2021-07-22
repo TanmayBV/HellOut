@@ -338,7 +338,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 88d58c98a486de84a859b0910a27914d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Speed: 6
+  Speed: 4.8
 --- !u!20 &519420031
 Camera:
   m_ObjectHideFlags: 0
@@ -463,7 +463,7 @@ PrefabInstance:
     - target: {fileID: 3587831073290180730, guid: b7e55ef2e065c4b47ba295399664f9a2,
         type: 3}
       propertyPath: speed
-      value: 6
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 3587831073290180730, guid: b7e55ef2e065c4b47ba295399664f9a2,
         type: 3}
