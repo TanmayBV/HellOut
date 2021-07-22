@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class Buttons_Menu : MonoBehaviour
 {
-   public void Play()
+	public void Play()
 	{
 		SceneManager.LoadScene("Main");
 	}
@@ -18,5 +18,11 @@ public class Buttons_Menu : MonoBehaviour
 	public void Quit()
 	{
 		Application.Quit();
+	}
+
+	public void Play_Again()
+	{
+		SceneManager.LoadScene("Main");
+		Time.timeScale = 1;
 	}
 }
