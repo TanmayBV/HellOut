@@ -739,7 +739,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 88d58c98a486de84a859b0910a27914d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Speed: 4
+  Speed: 1
   Player: {fileID: 1590117949}
   Youlose_: {fileID: 288580173}
   Offsets: 10
@@ -898,7 +898,12 @@ PrefabInstance:
     - target: {fileID: 3587831073290180730, guid: b7e55ef2e065c4b47ba295399664f9a2,
         type: 3}
       propertyPath: speed
-      value: 4
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3587831073290180730, guid: b7e55ef2e065c4b47ba295399664f9a2,
+        type: 3}
+      propertyPath: Layer.m_Bits
+      value: 256
       objectReference: {fileID: 0}
     - target: {fileID: 3587831073290180733, guid: b7e55ef2e065c4b47ba295399664f9a2,
         type: 3}
@@ -954,6 +959,42 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3587831073290180734, guid: b7e55ef2e065c4b47ba295399664f9a2,
+        type: 3}
+      propertyPath: m_Size.x
+      value: 0.54456794
+      objectReference: {fileID: 0}
+    - target: {fileID: 3587831073290180734, guid: b7e55ef2e065c4b47ba295399664f9a2,
+        type: 3}
+      propertyPath: m_Size.y
+      value: 0.7387972
+      objectReference: {fileID: 0}
+    - target: {fileID: 3587831073290180734, guid: b7e55ef2e065c4b47ba295399664f9a2,
+        type: 3}
+      propertyPath: m_Offset.x
+      value: 0.021010935
+      objectReference: {fileID: 0}
+    - target: {fileID: 3587831073290180734, guid: b7e55ef2e065c4b47ba295399664f9a2,
+        type: 3}
+      propertyPath: m_Offset.y
+      value: -0.0023708344
+      objectReference: {fileID: 0}
+    - target: {fileID: 4209444597652775643, guid: b7e55ef2e065c4b47ba295399664f9a2,
+        type: 3}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: 4422084297763085224, guid: 0000000000000000d000000000000000,
+        type: 0}
+    - target: {fileID: 6958847871857928359, guid: b7e55ef2e065c4b47ba295399664f9a2,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.03
+      objectReference: {fileID: 0}
+    - target: {fileID: 6958847871857928359, guid: b7e55ef2e065c4b47ba295399664f9a2,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.33
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b7e55ef2e065c4b47ba295399664f9a2, type: 3}
@@ -2187,7 +2228,7 @@ GameObject:
   - component: {fileID: 4533242779220606112}
   - component: {fileID: 6993328522491225858}
   - component: {fileID: 6274217182997486475}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: BG
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5964,7 +6005,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6817064603476153943}
   - component: {fileID: 6043757652912933446}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Grid
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6006,6 +6047,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1759815598205025601, guid: fb9e6c3ae6009a041a8c3ced2727c64e,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.32
+      objectReference: {fileID: 0}
     - target: {fileID: 2625957561124085155, guid: fb9e6c3ae6009a041a8c3ced2727c64e,
         type: 3}
       propertyPath: m_RootOrder
@@ -6071,6 +6117,12 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player_2
       objectReference: {fileID: 0}
+    - target: {fileID: 7050788285577939994, guid: fb9e6c3ae6009a041a8c3ced2727c64e,
+        type: 3}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: 7866945982896999795, guid: 0000000000000000d000000000000000,
+        type: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fb9e6c3ae6009a041a8c3ced2727c64e, type: 3}
 --- !u!156049354 &6043757652912933446
@@ -6094,7 +6146,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6470652235911868659}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Pre_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12714,7 +12766,7 @@ GameObject:
   - component: {fileID: 428145010492415478}
   - component: {fileID: 619349450155767347}
   - component: {fileID: 2424772810703214768}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Tilemap
   m_TagString: Untagged
   m_Icon: {fileID: 0}

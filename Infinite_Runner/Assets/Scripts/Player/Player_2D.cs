@@ -4,13 +4,17 @@ using UnityEngine;
 
 public class Player_2D : MonoBehaviour
 {
+    [SerializeField] Transform Groundcheck;
+    [SerializeField] LayerMask Layer;
     [SerializeField] float speed = 3f;
     [SerializeField] float gravity = 4f;
     [SerializeField] bool clicked;
-
+    
     [SerializeField] Rigidbody2D rb;
     [SerializeField] SpriteRenderer sr;
-    
+
+    [SerializeField] private bool isGrounded;
+
     void Start()
     {
         clicked = true;
@@ -20,13 +24,15 @@ public class Player_2D : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
-        if (clicked)
+        isGrounded = Physics2D.OverlapCircle(Groundcheck.position,0.5f,Layer);
+
+        if (clicked && isGrounded)
         {
             Up();
         }
-        else if (!clicked)
+        else if (!clicked && isGrounded)
         {
             Down();
         }
