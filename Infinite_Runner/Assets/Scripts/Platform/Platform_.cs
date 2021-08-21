@@ -56,7 +56,6 @@ public class Platform_ : MonoBehaviour
 		Transform levelPartTransform = Instantiate(levelPart, new Vector3(spawnPosition.x + Offset,0,0), Quaternion.identity);
 		levelPartTransform.parent = Container.transform;
 		Destoyer.Add(levelPartTransform);
-		//Destroy(levelPartTransform.gameObject, Time); 22.89
 		return levelPartTransform;
 	}
 

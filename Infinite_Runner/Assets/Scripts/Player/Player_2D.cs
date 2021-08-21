@@ -24,9 +24,9 @@ public class Player_2D : MonoBehaviour
     }
 
     // Update is called once per frame
-    void FixedUpdate()
+    void Update()
     {
-        isGrounded = Physics2D.OverlapCircle(Groundcheck.position,0.5f,Layer);
+        isGrounded = Physics2D.OverlapCircle(Groundcheck.position,.5f,Layer);
 
         if (clicked && isGrounded)
         {
@@ -37,7 +37,7 @@ public class Player_2D : MonoBehaviour
             Down();
         }
 
-        transform.Translate(Vector3.right * speed * Time.deltaTime);
+       transform.Translate(Vector3.right * speed * Time.deltaTime);
     }
 
     public void toggle()
@@ -56,4 +56,5 @@ public class Player_2D : MonoBehaviour
         rb.gravityScale = gravity;
         sr.flipY = false;
     }
+
 }
