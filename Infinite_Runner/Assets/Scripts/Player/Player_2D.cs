@@ -6,7 +6,7 @@ public class Player_2D : MonoBehaviour
 {
     [SerializeField] Transform Groundcheck;
     [SerializeField] LayerMask Layer;
-    [SerializeField] float speed = 3f;
+    public float speed = 3f;
     [SerializeField] float gravity = 4f;
     [SerializeField] bool clicked;
     

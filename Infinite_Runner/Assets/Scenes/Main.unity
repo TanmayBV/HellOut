@@ -830,8 +830,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f028e4341c4b4a74b966bd4c1005d895, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Player: {fileID: 1371964321}
+  Camera: {fileID: 519420030}
   scoretext: {fileID: 1376337785}
   scorecount: 0
+  FastCounter: 10
   pointpersecond: 2
 --- !u!4 &599281577
 Transform:
