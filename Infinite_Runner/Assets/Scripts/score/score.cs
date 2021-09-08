@@ -26,13 +26,13 @@ public class score : MonoBehaviour
 
         if (scorecount>=FastCounter)
 		{
-            float Incremanter = 1;
+            float Incremanter = 0.5f;
             float PlayerSpeed = Player.speed;
             float CameraSpeed = Camera.Speed;
 
             Player.speed = Player.speed + Incremanter;
             Camera.Speed = Camera.Speed + Incremanter+.1f;
-            FastCounter = scorecount + 20;
+            FastCounter = scorecount + 10;
 		}
     }
 }
