@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Player_2D : MonoBehaviour
 {
+    public AudioSource audio;
     [SerializeField] Transform Groundcheck;
     [SerializeField] LayerMask Layer;
     public float speed = 3f;
@@ -42,6 +43,7 @@ public class Player_2D : MonoBehaviour
 
     public void toggle()
     {
+        audio.Play();
         clicked = !clicked;
     }
 
