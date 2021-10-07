@@ -17,7 +17,7 @@ public class Player_2D : MonoBehaviour
     [SerializeField] SpriteRenderer sr;
     [SerializeField] GameObject EndPanal;
     [SerializeField] private bool isGrounded;
-    public AdsManager Ads;
+    private Ads_Manager Ads;
 
     
     void Start()
@@ -26,11 +26,10 @@ public class Player_2D : MonoBehaviour
         clicked = true;
         rb = GetComponent<Rigidbody2D>();
         sr = GetComponent<SpriteRenderer>();
-        Ads = FindObjectOfType<AdsManager>();
+        Ads = FindObjectOfType<Ads_Manager>();
+        Ads.adsPlaying = false;
 
     }
-
-    // Update is called once per frame
     void Update()
     {
         isGrounded = Physics2D.OverlapCircle(Groundcheck.position,.8f,Layer);
@@ -72,17 +71,17 @@ public class Player_2D : MonoBehaviour
 
 	private void OnCollisionEnter2D(Collision2D collision)
 	{
-        if (collision.collider.tag == "Traps")
+        if (collision.collider.CompareTag("Traps"))
         {
             gameObject.SetActive(false);
             EndPanal.SetActive(true);
             Time.timeScale = 0;
-            Ads.lives += 1+PlayerPrefs.GetInt("tries",0);
-            Ads.ShowBanner();
         }
-        else
-        {
-            Ads.Hidebaner();
-        }
-	}
+    }
+    
+    private void OnDisable()
+    {
+        Ads.instruction++;
+        Ads.lives++;
+    }
 }

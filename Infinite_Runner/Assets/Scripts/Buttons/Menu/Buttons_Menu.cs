@@ -6,15 +6,19 @@ using UnityEngine.SceneManagement;
 
 public class Buttons_Menu : MonoBehaviour
 {
-	
+	private void Start()
+	{
+		Time.timeScale = 0;
+	}
+
 	public void Play()
 	{
 		SceneManager.LoadScene("Main");
 	}
 
-	public void Options()
+	public void Continuegame()
 	{
-		//Write Options Code
+		Time.timeScale = 1;
 	}
 
 	public void Quit()

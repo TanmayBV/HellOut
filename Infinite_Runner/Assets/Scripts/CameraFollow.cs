@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -9,7 +10,8 @@ public class CameraFollow : MonoBehaviour
     [SerializeField] GameObject Player_Red;
     [SerializeField] GameObject Youlose_;
     [SerializeField] float Offsets;
-
+    
+    
 	#region Player_Blue
 	private float CurrentPlayer_Dis, CurrentCamera_Dis;
     private float CurrentPlayer_DisY, CurrentCamera_DisY;
@@ -19,9 +21,8 @@ public class CameraFollow : MonoBehaviour
 	private float CurrentPlayer_Red_Dis, CurrentCamera_Red_Dis;
     private float CurrentPlayer_Red_DisY, CurrentCamera_Red_DisY;
     #endregion
-    
 
-
+   
     void Update()
     {
         #region Calulating_Distance_Player_Blue
@@ -46,7 +47,7 @@ public class CameraFollow : MonoBehaviour
     {
         if (CurrentPlayer_Dis + Offsets < CurrentCamera_Dis || CurrentPlayer_DisY  < -6.56f || CurrentPlayer_DisY > 4.66f)
         {
-            //Destroy(Player_Blue);
+            //Destroy(Player_Blue)
             Player_Blue.SetActive(false);
             Youlose_.SetActive(true);
             Time.timeScale = 0;

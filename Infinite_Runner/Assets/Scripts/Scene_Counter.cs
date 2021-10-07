@@ -21,6 +21,10 @@ public class Scene_Counter : MonoBehaviour
         {
             _Timer -= 0.02f;
             _timerText.text = math.round(_Timer).ToString();
+            if (_Timer<1)
+            {
+                _timerText.text = "RUN !";
+            }
         }
         else
         {
