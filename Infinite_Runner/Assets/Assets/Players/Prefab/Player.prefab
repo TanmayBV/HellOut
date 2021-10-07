@@ -120,6 +120,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3351e6893c1bfd44793acafb86fbd92d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  audio: {fileID: 0}
   Groundcheck: {fileID: 6958847871857928359}
   Layer:
     serializedVersion: 2
@@ -129,6 +130,7 @@ MonoBehaviour:
   clicked: 0
   rb: {fileID: 3587831073290180735}
   sr: {fileID: 3587831073290180732}
+  EndPanal: {fileID: 0}
   isGrounded: 0
 --- !u!95 &3587831073290180731
 Animator:

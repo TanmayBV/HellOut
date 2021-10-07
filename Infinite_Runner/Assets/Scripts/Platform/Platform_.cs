@@ -13,7 +13,7 @@ public class Platform_ : MonoBehaviour
 	[SerializeField] private List<Transform> Destoyer;
 
 	[SerializeField] private Transform player;
-	[SerializeField] private float Offset = 10f;
+	[SerializeField] private float DisBtnPaltform = 10f;
 	[SerializeField] private float DestroyOffset = 2f, Distance = 22.89f, CurrentDistance;
 
 	private int IndexDestroyer = 0;
@@ -53,7 +53,7 @@ public class Platform_ : MonoBehaviour
 
 	private Transform SpawnLevelPart(Transform levelPart,Vector3 spawnPosition)
 	{
-		Transform levelPartTransform = Instantiate(levelPart, new Vector3(spawnPosition.x + Offset,0,0), Quaternion.identity);
+		Transform levelPartTransform = Instantiate(levelPart, new Vector3(spawnPosition.x + DisBtnPaltform,0,0), Quaternion.identity);
 		levelPartTransform.parent = Container.transform;
 		Destoyer.Add(levelPartTransform);
 		return levelPartTransform;
